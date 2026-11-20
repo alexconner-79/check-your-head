@@ -1,94 +1,103 @@
 <p align="center"><img src=".claude-plugin/icon.png" width="120" alt="Check Your Head icon"></p>
 
-# Check Your Head
+# check-your-head
 
-Six Claude skills for the parts of design work that need evidence. Check a design isn't generic. Say no to a dark pattern and offer something better. Decide how you'll measure it, record why you chose it, log what you compromised, and show what it achieved.
+**So what'cha want? Evidence, mostly.** Six Claude skills for the parts of design work that end in someone asking "and what's that based on?"
 
-Each skill runs on its own, at any point, for any feature. It's free and MIT licensed.
+Design rarely loses an argument on craft. It loses on receipts. Nobody captured a baseline, nobody wrote down why option B won, the compromise shipped on a Friday was never logged, and the case study says "improved the experience" because the numbers went wherever numbers go. Meanwhile, in one study, more than half of AI-generated ecommerce components shipped with a dark pattern nobody asked for.
 
-## Why
+These skills fix that at the moment it happens, not in a retro three months later. Paste a Slack thread, get a decision record. Point at a Figma frame, get told whether it looks like 400 other fintechs. Forward a request to bury the cancel button, get a brief that says no politely and still hits the target.
 
-Most design arguments get lost on evidence. Nobody captured a baseline, nobody wrote down why option B won, and when the outcome is questioned there's nothing to point at. AI-assisted work adds a second problem: it drifts towards the same templates, and often the same manipulative patterns. In one study, more than half of 1,296 LLM-generated ecommerce components contained at least one deceptive pattern ([Chen et al.](https://arxiv.org/abs/2502.13499)).
+Built by a UX designer who has lost those arguments, for people who'd rather not.
 
-So paste a Slack thread and get a decision record. Point at a Figma frame and get a sameness check. Forward a stakeholder request and get a pushback brief you can send.
+## The six skills
 
-## The skills
+**design-sameness-check.** For when the landing page could belong to anyone. Rates layout, type, colour, imagery, motion and copy as Distinct, Mixed or Generic, then suggests alternatives only your product could use. It leaves usability conventions alone; familiar interaction is fine, generic expression is the problem. Works on screens or straight on the code. [Docs](docs/design-sameness-check.md)
 
-| Skill | Use it when | You get |
-|---|---|---|
-| [design-sameness-check](docs/design-sameness-check.md) | A design looks generic, templated or AI-made | Ratings by area, findings with alternatives specific to your product, and a list of what to protect. Works on screens or code. |
-| [deceptive-pattern-pushback](docs/deceptive-pattern-pushback.md) | You're reviewing consent, pricing, checkout, cancel or retention flows, or pushing back on a request | An audit classed Dark, Grey or Mistake, or a one-page pushback brief with an honest alternative and a version short enough for Slack |
-| [heart-metrics-plan](docs/heart-metrics-plan.md) | Before release, or when someone asks how a design will be measured | A HEART table with baselines, targets, guardrails, owners and the events engineering needs to add |
-| [design-decision-record](docs/design-decision-record.md) | A decision just happened in a meeting, thread or comment | A short, dated record: options, trade-off, who agreed, when to revisit |
-| [ux-debt-entry](docs/ux-debt-entry.md) | You've shipped or spotted a compromise, or have review comments to triage | Debt rows or tickets with user impact, severity, cause, fix, effort and the cost of leaving it |
-| [design-impact-write-up](docs/design-impact-write-up.md) | A project ends, a review is due, or your portfolio needs a case study | A write-up, case study or 150-word summary, with every figure labelled as measured, proxy or estimate |
+**deceptive-pattern-pushback.** For when someone asks you to "make the opt-out less prominent". Audits flows and classes each finding Dark, Grey or Mistake, or turns the request into a one-page brief: the pattern, the risk, an honest alternative and how to measure it. Comes with a Slack-length version, because nobody reads the page. [Docs](docs/deceptive-pattern-pushback.md)
+
+**heart-metrics-plan.** Baselines before launch, not three months later when someone asks "did it work?" Goals, signals, metrics, targets, guardrails and who owns each one, plus the events engineering needs to add. No analytics? It has proxies. [Docs](docs/heart-metrics-plan.md)
+
+**design-decision-record.** Because "we decided that in a meeting in March" is not a record. One decision, what was rejected, what was given up, who agreed, and when to revisit. If design was overruled, it says so, without the passive aggression. [Docs](docs/design-decision-record.md)
+
+**ux-debt-entry.** The compromises you shipped to hit a date, written down before everyone forgets them. Severity, cause, fix, effort, and the cost of leaving it, which is the only column anyone prioritises from. Takes one item or a pile of Figma comments. [Docs](docs/ux-debt-entry.md)
+
+**design-impact-write-up.** Case studies without the made-up 40%. Builds a write-up, case study or 150-word summary from whatever evidence exists, labels every figure as measured, proxy or estimate, and tells you what's missing. It will not round up. [Docs](docs/design-impact-write-up.md)
+
+Each one runs on its own, whenever you need it. None of them assumes another has run first, because real projects don't happen in order.
 
 ## Try it
 
-Once installed, ask in plain language. For example:
+- "Run a sameness check on this landing page"
+- "Product want two more save screens in the cancel flow. Help me push back."
+- "What should we measure before the new onboarding ships?"
+- "Log this decision" (with a pasted thread)
+- "Add these review comments to UX debt"
+- "Write up the payee setup redesign for my portfolio"
 
-- "Run a sameness check on this landing page" (with a screenshot, URL or Figma link)
-- "Product want to hide the cancel button in settings. Help me push back."
-- "What should we measure for the new onboarding flow before it ships?"
-- "Log this decision" (with a pasted Slack thread)
-- "Add these review comments to the UX debt register"
-- "Write up the impact of the payee setup redesign for my portfolio"
+Or name the skill if you want to be sure: "use ux-debt-entry on these".
 
-## Install
+## Works with your tools
 
-**Claude (web and desktop):** download the `.plugin` file from the [latest release](https://github.com/alexconner-79/check-your-head/releases) and open it in Claude to install. To install a single skill, upload its folder from `skills/` as a skill instead.
+The skills read from and write to whatever you've connected: Figma, Jira, Linear, Notion, Confluence, Google Sheets, Slack, Mobbin, a repo in Claude Code, or Claude Design. Nothing connected? You paste in, it pastes back.
 
-**Claude Code:**
+To stop telling it where things live, add a routing note. Copy [`check-your-head.example.md`](check-your-head.example.md) to your repo root as `check-your-head.md`, or paste it into `CLAUDE.md` or a Claude Project's instructions. Decisions to Notion, debt to Jira, write-ups to wherever you keep the good stuff.
+
+It always asks before creating tickets, posting comments or editing shared pages. Nobody wants to explain 40 surprise Jira issues to a delivery manager.
+
+## What's inside
+
+```
+check-your-head/
+├── skills/
+│   └── <skill-name>/
+│       ├── SKILL.md       Works on its own
+│       ├── references/    The depth: tell lists, pattern catalogues,
+│       │                  severity rules, evidence ladder, tool routing
+│       ├── templates/     Output formats
+│       └── examples/      A worked example, so you know what good looks like
+├── docs/                  One page per skill
+└── check-your-head.example.md   Routing note template
+```
+
+Every skill carries its own copy of the tool routing guide, so you can install one without the other five.
+
+## Installation
+
+### Claude Code
 
 ```
 /plugin marketplace add alexconner-79/check-your-head
 /plugin install check-your-head@check-your-head
 ```
 
-Or copy any folder from `skills/` into `~/.claude/skills/` (just for you) or `.claude/skills/` (for everyone on a project).
+Or cherry-pick: copy any folder from `skills/` into `~/.claude/skills/`.
 
-## Works with your tools
+### Claude.ai / Claude Desktop
 
-The skills read from and write to whatever you have connected: Figma, Jira, Linear, Notion, Confluence, Google Sheets, Slack, Mobbin, a repo in Claude Code, or Claude Design. With nothing connected, you paste things in and get output ready to paste back.
+Download `check-your-head.plugin` from [Releases](https://github.com/alexconner-79/check-your-head/releases) and open it in Claude. Want just one skill? Upload its folder from `skills/` in Settings instead.
 
-To send records to the right place automatically, add a routing note. Copy [`check-your-head.example.md`](check-your-head.example.md) to your repo root as `check-your-head.md`, or paste it into `CLAUDE.md` or a Claude Project's instructions. Each project can route to different tools, for example decisions to Notion and debt to Jira.
+## A word on the legal bits
 
-The skills always ask before creating tickets, posting comments or editing shared pages.
+deceptive-pattern-pushback knows its way around the DMCC Act, FCA Consumer Duty, UK GDPR, PECR, Ofcom rules, the DSA and the AI Act. It is not a lawyer and won't pretend to be one. Several of those rules are still being phased in, so it checks current status before citing anything and tells you when to call compliance.
 
-## How each skill is built
+## The name
 
-```
-skills/<skill-name>/
-├── SKILL.md        Works on its own
-├── references/     Depth Claude reads when it needs it
-├── templates/      Output formats
-└── examples/       A worked example showing the expected quality
-```
+Check Your Head is the Beastie Boys album. These skills check your work before someone else does. Same naming policy as [ill-communication](https://github.com/alexconner-79/ill-communication), same level of restraint.
 
-Every skill carries its own copy of the tool routing guide, so you can install any one without the others.
+## Lineage and credits
 
-## FAQ
-
-**Do I need any connectors?**
-No. Connectors save copying and pasting; the skills work without them.
-
-**Is the regulatory content in deceptive-pattern-pushback legal advice?**
-No. It's orientation on UK and EU rules so you know when to involve legal or compliance. Several provisions are being phased in, so the skill checks current status before citing anything.
-
-**Will it make up numbers in my case study?**
-No. The impact write-up labels every figure and won't invent or round up. If evidence is thin, it says so and tells you where to get more.
-
-**Can I change the tell list, patterns or severity rules?**
-Yes. They live in each skill's `references/` folder as plain markdown. See [CONTRIBUTING](CONTRIBUTING.md).
-
-**Are the examples real?**
-No. Every example uses a fictional company.
+- **HEART** is from Kerry Rodden, Hilary Hutchinson and Xin Fu at Google, *Measuring the User Experience on a Large Scale* (CHI 2010)
+- **Decision records** borrow from Michael Nygard's architecture decision records, moved to the design side of the table
+- **Deceptive patterns** build on Harry Brignull's work at [deceptive.design](https://www.deceptive.design), the Center for Democracy & Technology's 2026 taxonomy of dark patterns in AI chatbots, and the Dark, Grey and Mistake classes used in Uxcel's dark patterns audit
+- **The AI-generated dark patterns stat** is from Chen et al., [Deception at Scale](https://arxiv.org/abs/2502.13499): more than half of 1,296 LLM-generated ecommerce components contained at least one deceptive pattern
+- **The anti-slop instinct** owes a nod to Anthropic's frontend-design skill and its stand against purple gradients
 
 ## Also by me
 
-- [ill-communication](https://github.com/alexconner-79/ill-communication): UX writing and microcopy skill
+- [ill-communication](https://github.com/alexconner-79/ill-communication): UX writing, not fighting
 - [high-plains-drifter](https://github.com/alexconner-79/high-plains-drifter): Figma to React component alignment
 
 ## Licence
 
-[MIT](LICENSE)
+MIT. See [LICENSE](LICENSE). Contributions welcome, especially new tells and patterns; see [CONTRIBUTING](CONTRIBUTING.md).
