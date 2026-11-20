@@ -1,8 +1,8 @@
-<p align="center"><img src=".claude-plugin/icon.png" width="120" alt="Check Your Head icon"></p>
+<img width="1600" height="560" alt="Check your head. Claude skill pack: 6 tools for ux design" src="https://github.com/user-attachments/assets/b64d76b5-135b-4348-bfee-ce3bcfb5e619" /><br>
 
-# check-your-head
+**So what'cha want? Evidence, mostly.** 
 
-**So what'cha want? Evidence, mostly.** Six Claude skills for the parts of design work that end in someone asking "and what's that based on?"
+Six Claude skills for the parts of design work that end in someone asking "and what's that based on?"
 
 Design rarely loses an argument on craft. It loses on receipts. Nobody captured a baseline, nobody wrote down why option B won, the compromise shipped on a Friday was never logged, and the case study says "improved the experience" because the numbers went wherever numbers go. Meanwhile, in one study, more than half of AI-generated ecommerce components shipped with a dark pattern nobody asked for.
 
@@ -12,17 +12,19 @@ Built by a UX designer who has lost those arguments, for people who'd rather not
 
 ## The six skills
 
-**design-sameness-check.** For when the landing page could belong to anyone. Rates layout, type, colour, imagery, motion and copy as Distinct, Mixed or Generic, then suggests alternatives only your product could use. It leaves usability conventions alone; familiar interaction is fine, generic expression is the problem. Works on screens or straight on the code. [Docs](docs/design-sameness-check.md)
+**01 design-sameness-check.**<br>
+For when the landing page could belong to anyone. Rates layout, type, colour, imagery, motion and copy as Distinct, Mixed or Generic, then suggests alternatives only your product could use. It leaves usability conventions alone; familiar interaction is fine, generic expression is the problem. Works on screens or straight on the code. [Docs](docs/design-sameness-check.md)
 
-**deceptive-pattern-pushback.** For when someone asks you to "make the opt-out less prominent". Audits flows and classes each finding Dark, Grey or Mistake, or turns the request into a one-page brief: the pattern, the risk, an honest alternative and how to measure it. Comes with a Slack-length version, because nobody reads the page. [Docs](docs/deceptive-pattern-pushback.md)
+**02 deceptive-pattern-pushback.**<br> 
+For when someone asks you to "make the opt-out less prominent". Audits flows and classes each finding Dark, Grey or Mistake, or turns the request into a one-page brief: the pattern, the risk, an honest alternative and how to measure it. Comes with a Slack-length version, because nobody reads the page. [Docs](docs/deceptive-pattern-pushback.md)
 
-**heart-metrics-plan.** Baselines before launch, not three months later when someone asks "did it work?" Goals, signals, metrics, targets, guardrails and who owns each one, plus the events engineering needs to add. No analytics? It has proxies. [Docs](docs/heart-metrics-plan.md)
+**03 heart-metrics-plan.** <br>Baselines before launch, not three months later when someone asks "did it work?" Goals, signals, metrics, targets, guardrails and who owns each one, plus the events engineering needs to add. No analytics? It has proxies. [Docs](docs/heart-metrics-plan.md)
 
-**design-decision-record.** Because "we decided that in a meeting in March" is not a record. One decision, what was rejected, what was given up, who agreed, and when to revisit. If design was overruled, it says so, without the passive aggression. [Docs](docs/design-decision-record.md)
+**04 design-decision-record.** <br>Because "we decided that in a meeting in March" is not a record. One decision, what was rejected, what was given up, who agreed, and when to revisit. If design was overruled, it says so, without the passive aggression. [Docs](docs/design-decision-record.md)
 
-**ux-debt-entry.** The compromises you shipped to hit a date, written down before everyone forgets them. Severity, cause, fix, effort, and the cost of leaving it, which is the only column anyone prioritises from. Takes one item or a pile of Figma comments. [Docs](docs/ux-debt-entry.md)
+**05 ux-debt-entry.** <br>The compromises you shipped to hit a date, written down before everyone forgets them. Severity, cause, fix, effort, and the cost of leaving it, which is the only column anyone prioritises from. Takes one item or a pile of Figma comments. [Docs](docs/ux-debt-entry.md)
 
-**design-impact-write-up.** Case studies without the made-up 40%. Builds a write-up, case study or 150-word summary from whatever evidence exists, labels every figure as measured, proxy or estimate, and tells you what's missing. It will not round up. [Docs](docs/design-impact-write-up.md)
+**06 design-impact-write-up.** <br>Case studies without the made-up 40%. Builds a write-up, case study or 150-word summary from whatever evidence exists, labels every figure as measured, proxy or estimate, and tells you what's missing. It will not round up. [Docs](docs/design-impact-write-up.md)
 
 Each one runs on its own, whenever you need it. None of them assumes another has run first, because real projects don't happen in order.
 
