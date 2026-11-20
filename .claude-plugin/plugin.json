@@ -1,0 +1,22 @@
+{
+  "name": "check-your-head",
+  "version": "0.3.0",
+  "description": "Six standalone design skills for the moments that need evidence: sameness checks, deceptive pattern pushback, HEART metrics, decision records, UX debt and impact write-ups. Works with Figma, Jira, Notion, Linear, Claude Code and Claude Design, or plain paste.",
+  "author": {
+    "name": "Alex Conner"
+  },
+  "homepage": "https://github.com/alexconner-79/check-your-head",
+  "repository": "https://github.com/alexconner-79/check-your-head",
+  "license": "MIT",
+  "keywords": [
+    "ux",
+    "design",
+    "design-ops",
+    "dark-patterns",
+    "metrics",
+    "decision-records",
+    "ux-debt",
+    "case-study"
+  ],
+  "icon": "./.claude-plugin/icon.png"
+}

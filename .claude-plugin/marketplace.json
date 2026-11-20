@@ -1,0 +1,13 @@
+{
+  "name": "check-your-head",
+  "owner": {
+    "name": "Alex Conner"
+  },
+  "plugins": [
+    {
+      "name": "check-your-head",
+      "source": "./",
+      "description": "Six standalone design skills for the moments that need evidence."
+    }
+  ]
+}
